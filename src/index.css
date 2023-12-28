@@ -69,7 +69,7 @@ header {
   font-size: 14px;
 }
 
-.item-list {
+.items-section {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
   background-color: #fff;
@@ -79,16 +79,16 @@ header {
   position: relative;
 }
 
-.item-list::-webkit-scrollbar {
+.items-section::-webkit-scrollbar {
   width: 0;
   /* width: 8px; */
 }
 
-.item-list::-webkit-scrollbar-track {
+.items-section::-webkit-scrollbar-track {
   background: #faf7f3;
 }
 
-.item-list::-webkit-scrollbar-thumb {
+.items-section::-webkit-scrollbar-thumb {
   background-color: #f3f1ee;
 }
 

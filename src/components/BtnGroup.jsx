@@ -1,44 +1,43 @@
+import { useItemsStore } from "../stores/itemsStore";
 import Button from "./Button";
 
-export default function BtnGroup({
-  handleRomoveAllItmes,
-  handleResetToInitial,
-  handleMarkAllAsComplete,
-  handleMarkAllAsIncomplete,
-}) {
+export default function BtnGroup() {
+  const markAllAsComplete = useItemsStore((state) => state.markAllAsComplete);
+  const markAllAsIncomplete = useItemsStore(
+    (state) => state.markAllAsIncomplete
+  );
+  const resetToInitial = useItemsStore((state) => state.resetToInitial);
+  const removeAllItems = useItemsStore((state) => state.removeAllItems);
+
+  const secondaryButtons = [
+    {
+      text: "Mark all as complete",
+      onClick: markAllAsComplete,
+    },
+    {
+      text: "Mark all as incomplete",
+      onClick: markAllAsIncomplete,
+    },
+    {
+      text: "Reset to initial",
+      onClick: resetToInitial,
+    },
+    {
+      text: "Remove all items",
+      onClick: removeAllItems,
+    },
+  ];
+
   return (
     <section className="button-group">
-      <Button
-        onClick={handleMarkAllAsComplete}
-        buttonType="secondary"
-        type="secondary"
-      >
-        Mark all as complete
-      </Button>
-
-      <Button
-        onClick={handleMarkAllAsIncomplete}
-        buttonType="secondary"
-        type="secondary"
-      >
-        Mark all as incomplete
-      </Button>
-
-      <Button
-        onClick={handleResetToInitial}
-        buttonType="secondary"
-        type="secondary"
-      >
-        Reset to initial
-      </Button>
-
-      <Button
-        onClick={handleRomoveAllItmes}
-        buttonType="secondary"
-        type="secondary"
-      >
-        Remove all items
-      </Button>
+      {secondaryButtons.map((button) => (
+        <Button
+          key={button.text + button.onClick.toString()}
+          text={button.text}
+          onClick={button.onClick}
+          buttonType="secondary"
+        />
+      ))}
     </section>
   );
 }

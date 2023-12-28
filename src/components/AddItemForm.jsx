@@ -35,7 +35,7 @@ export default function AddItemForm({ onAddItem }) {
           setItemText(e.target.value);
         }}
       />
-      <Button>Add to list</Button>
+      <Button text="Add to list" />
     </form>
   );
 }
