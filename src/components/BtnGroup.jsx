@@ -11,11 +11,11 @@ export default function BtnGroup() {
 
   const secondaryButtons = [
     {
-      text: "Mark all as complete",
+      text: "All complete",
       onClick: markAllAsComplete,
     },
     {
-      text: "Mark all as incomplete",
+      text: "All incomplete",
       onClick: markAllAsIncomplete,
     },
     {
@@ -23,7 +23,7 @@ export default function BtnGroup() {
       onClick: resetToInitial,
     },
     {
-      text: "Remove all items",
+      text: "Remove all",
       onClick: removeAllItems,
     },
   ];

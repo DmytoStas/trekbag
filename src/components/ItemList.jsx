@@ -45,7 +45,8 @@ export default function ItemList() {
         />
       ) : null}
       {items.length === 0 && <EmptyView />}
-      <ul>
+
+      <ul className="items-list">
         {sortedItems.map((item) => (
           <li key={item.id} className="item">
             <Item
