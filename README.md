@@ -6,7 +6,7 @@ Individual project
 
 TrekBag is a simple, convenient and useful application that won't let you forget the things you need for your trip. Add, remove, mark, sort and reset your list - it's all about TrekBag
 
-![TrekBag](./assets/TrekBag.png)
+![TrekBag](./assets/TrekBag.jpg)
 
 ## Features
 
